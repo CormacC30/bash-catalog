@@ -1,0 +1,7 @@
+300 frank manager sales €5000
+400 caroline developer technology €5500
+100 mary sysadmin technology €7000
+200 rosanne manager marketing €9500
+500 eamonn dba technology €6000
+600 colm sysadmin technology €4500
+700 Johnny Computerman sysadmin technology €70000
