@@ -2,34 +2,35 @@
 # Author: Cormac Costello
 # Script that can be used to add a new festival record to festivals.csv
 echo "Welcome $USER, get ready to add a new Festival record"
-if [ -a festival.csv ]; then
+if [ -a festival.txt ]; then
     echo "festival.txt file exists"
 else
-    touch festival.csv
+    touch festival.txt
 fi
 
-echo "Generating a new festival catalog Number: "
-numRecord=`tail -n1 festival.csv | awk '{ print $1 }'`
+echo "Please enter the festival catalogue number "
+read catNum
 
-if [ numRecord -eq 0 ]; then
-catNum=000
-else
-catNum=($numRecord + 1)
-fi
-
-echo "$catNum"
-
-while ! [[ "$festName" =~ ^[0-9]{3}$ ]]; do
-    echo "Invalid entry \"$empID\", please enter a three-digit number"
-    read empID
+while ! [[ "$catNum" =~ ^[0-9]{3}$ ]]; do
+    echo "Invalid entry \"$catNum\", please enter a three-digit number"
+    read catNum
 done
 
-echo "Please enter the employee name"
-read empName
-echo "Please enter the employee's role"
-read empRole
-echo "Please enter the employee's Department"
-read empDept
+numExists=`grep '^$catNum' festival.txt | wc -l`
+if [ $numExists -ne 0 ]; then
+	echo "A festival with this catalog number already exists"
+	echo "Please enter a different catalog number"
+	read catNum
+else
+	echo "Your catalogue number is: $catNum"
+fi
+
+echo "Please enter the festival name"
+read festName
+echo "Please enter the festival type"
+read festType
+echo "Please enter the festival location"
+read festLocation
 
 while true; do
     echo "Please enter the employee's salary in €"
@@ -42,9 +43,9 @@ while true; do
 done
 
 # Create a single line with all the details and append it to the file
-employee_record="$empID $empName $empRole $empDept €$salary"
-echo "$employee_record" >> employee.txt
+festival_record="$catNum $festName $festType $festLocation €$salary"
+echo "$festival_record" >> festival.txt
 
-echo "Employee record added successfully:"
-echo "$employee_record"
+echo "Festival record added successfully:"
+echo "$festival_record"
 
