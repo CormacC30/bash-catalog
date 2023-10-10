@@ -26,6 +26,7 @@ do
 			;;
 		"Search")
 			echo "you chose to search for record(s)"
+			/bin/bash ../SearchRecords/newSearch.sh
 			;;
 		"Remove")
 			echo "you chose to remove records"
