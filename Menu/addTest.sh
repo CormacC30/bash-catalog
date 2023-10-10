@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Cormac Costello
-# Script that can be used to add a new festival record to festivals.csv
+# Script that can be used to add a new music track to a list of tracks
 echo "Welcome $USER, get ready to add a new entry"
 catalog_file="musictracks.csv"
 if [ -a "$catalog_file" ]; then
@@ -21,13 +21,7 @@ padNumber() {
 
 #find the last catalog number and increment it
 #Note: sed is used to ignore the leading zero's so the catalog number is treated as decimal rather than octal
-numLines=`wc -l musictracks.csv | awk '{print $1}'`
-if [ $numLines -gt 1 ]; then
-	last_cat_number=$(tail -n 1 "$catalog_file" | awk 'BEGIN {FS=";"}{print $1}' | sed 's/^0*//')
-else
-	last_cat_number=0
-fi
-
+last_cat_number=$(tail -n 1 "$catalog_file" | awk 'BEGIN {FS=";"}{print $1}' | sed 's/^0*//')
 next_cat_number=$((last_cat_number + 1))
 
 #pad the number to three digits
