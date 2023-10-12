@@ -33,6 +33,8 @@ next_cat_number=$((last_cat_number + 1))
 #pad the number to three digits
 next_cat_num_pad=$(padNumber "$next_cat_number")
 
+echo "Your new track will have auto-generated catalog number of: $next_cat_num_pad"
+
 read -p "Enter Track Name: " trackName
 
 read -p "Enter Artist: " artist
@@ -83,16 +85,16 @@ echo "Would you like to add another track? (y/n) "
 read choice
 case $choice in
 
-	[yY] | [yY][eE][sS] )
-		echo "Agreed"
-		;;
-	[nN] | [nN][oO] )
-		echo "Not agreed"
-		break
-		;;
-	*) echo "Invalid Input"
-		echo "Please try again"
-		;;
+        [yY] | [yY][eE][sS] )
+                echo "Agreed"
+                ;;
+        [nN] | [nN][oO] )
+                echo "Not agreed"
+                break
+                ;;
+        *) echo "Invalid Input"
+                echo "Please try again"
+                ;;
 
 esac
 
