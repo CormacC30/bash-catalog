@@ -67,7 +67,7 @@ else
                                                         echo
                                                 else
                                                         echo "There are $numRec tracks recorded in our records: "
-                                                        grep $trackNum musictracks.csv | sed 's/;/ /g' 
+                                                        grep $trackNum musictracks.csv | sed 's/;/ /g' 2> /dev/null
                                                         echo
                                                         echo "Would you like to search again?"
                                                         echo                                            
@@ -89,7 +89,7 @@ else
                                                 else
                                                         echo "There are $numRec tracks recorded in our records: " 
                                                         echo
-                                                        grep -i $trackName musictracks.csv | awk sed 's/;/ /g'
+                                                        grep -i $trackName musictracks.csv | awk sed 's/;/ /g' 2> /dev/null
                                                         
                                                 fi
                                         echo
@@ -114,7 +114,7 @@ else
                                                 else
                                                         echo "There are $numRec tracks recorded in our records: " 
                                                         echo
-                                                        grep -i $album musictracks.csv | awk sed 's/;/ /g'
+                                                        grep -i $album musictracks.csv | awk sed 's/;/ /g' 2> /dev/null
                                                         
                                                 fi
                                         echo
@@ -138,7 +138,7 @@ else
                                                         echo
                                                 else
                                                         echo
-                                                        grep -i $genre musictracks.csv | awk sed 's/;/ /g'
+                                                        grep -i $genre musictracks.csv | awk sed 's/;/ /g' 2> /dev/null
                                                         
                                                 fi
                                         echo
@@ -153,7 +153,7 @@ else
                                         sleep 1
                                         echo
                                         echo "Bye bye!"
-                                        break
+                                        exit 0
                                         ;;
                                 *)
                                         echo "Invalid option, Please try again"

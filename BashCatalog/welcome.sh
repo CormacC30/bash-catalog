@@ -5,11 +5,11 @@ echo "Hello $USER!"
 sleep 1
 echo "Welcome to.."
 echo
-echo M   M  U   U  SSSS  III  CCC	PPPP    A   L
-echo MM MM  U   U  S      I  C  C	P   P  A A  L
-echo M M M  U   U  SSS    I  C		PPPP  AAAAA L
-echo M   M  U   U     S   I  C  C	P     A   A L
-echo M   M   UUU   SSSS  III  CCC	P     A   A LLLLL
+echo M   M  U   U  SSSS  III  CCC       PPPP    A   L
+echo MM MM  U   U  S      I  C  C       P   P  A A  L
+echo M M M  U   U  SSS    I  C          PPPP  AAAAA L
+echo M   M  U   U     S   I  C  C       P     A   A L
+echo M   M   UUU   SSSS  III  CCC       P     A   A LLLLL
 
 echo -----------------------------------------------------------------------
 echo
