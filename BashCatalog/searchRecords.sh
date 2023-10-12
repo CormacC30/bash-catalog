@@ -14,7 +14,7 @@ if [ "$numRec" -eq 1 ]  #checks if there are records, if there are not, it exits
         echo
         echo
         echo "Would you like to add a new record? (y/n)" # here we might execute another program that allows user to create records, but not in this exercise
-        echo 
+        echo
         read choice
             case $choice in
 
@@ -100,7 +100,7 @@ else
                                         echo
                                         ;;
                                 "Album" )
-                                        echo "Please Enter the name of the track that you wish to search for:"
+                                        echo "Please Enter the album that you wish to search for:"
                                         echo
                                         read album
                                         albumExists=`grep -i $album musictracks.csv | wc -l`
@@ -125,7 +125,7 @@ else
                                         echo
                                         ;;
                                 "Genre" )
-                                        echo "Please Enter the name of the track that you wish to search for:"
+                                        echo "Please Enter the genre that you wish to search for:"
                                         echo
                                         read genre
                                         genreExists=`grep -i $genre musictracks.csv | wc -l`
