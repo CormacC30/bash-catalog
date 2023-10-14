@@ -149,10 +149,18 @@ else
                                         echo
                                         ;;
                                 "Exit" )
-                                        echo "You chose to exit the program. Bye!"
+                                        echo "You chose exit"
                                         sleep 1
                                         echo
-                                        echo "Bye bye!"
+                                        echo ---------------------------------------------------------------------
+                			echo "Returning to Main Menu"
+                			echo
+                			sleep 1
+                			echo "1) Add"
+               				echo "2) Search"
+                			echo "3) Remove"
+                			echo "4) Generate Report"
+                			echo "5) Quit"
                                         exit 0
                                         ;;
                                 *)

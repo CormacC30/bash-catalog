@@ -89,7 +89,17 @@ case $choice in
                 echo "Agreed"
                 ;;
         [nN] | [nN][oO] )
-                echo "Not agreed"
+                echo "You chose No"
+		sleep 1
+		echo ---------------------------------------------------------------------
+		echo "Returning to Main Menu"
+		echo
+		sleep 1
+		echo "1) Add"
+		echo "2) Search"
+		echo "3) Remove"
+		echo "4) Generate Report"
+		echo "5) Quit"
                 break
                 ;;
         *) echo "Invalid Input"
