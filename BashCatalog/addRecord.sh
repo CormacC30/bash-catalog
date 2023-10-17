@@ -81,6 +81,15 @@ duration=`printf "$padMinutes:$padSeconds"`
 
 echo "$next_cat_num_pad;$trackName;$artist;$album;$genre;$duration" >> "musictracks.csv"
 echo "Added successfully"
+echo
+echo "The Track you just added is:"
+echo "Catalog Number:  $next_cat_num_pad"
+echo "Track Name: $trackName"
+echo "Artist: $artist"
+echo "Album: $album"
+echo "Genre: $genre"
+echo "Duration: $duration"
+echo
 echo "Would you like to add another track? (y/n) "
 read choice
 case $choice in
