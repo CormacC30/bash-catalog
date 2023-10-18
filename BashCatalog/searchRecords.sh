@@ -66,13 +66,14 @@ else
                                                         echo --------------------------------------------------------
                                                         echo
                                                 else
-                                                        echo "There are $numRec tracks recorded in our records: "
+                                                        echo "There are $trackNumExists tracks matching your search: "
                                                         grep $trackNum musictracks.csv | sed 's/;/ /g' 2> /dev/null
                                                         echo
-                                                        echo "Would you like to search again?"
-                                                        echo                                            
-                                            fi         
-                                                        ;;                 
+                                                        echo "Would you like to search again? (y/n)"
+                                                        echo
+							/bin/bash optionSearch.sh
+                                            fi
+                                                        ;;
 
                                 "Name" )
                                         echo "Please Enter the name of the track that you wish to search for:"
@@ -87,17 +88,17 @@ else
                                                         echo --------------------------------------------------------
                                                         echo
                                                 else
-                                                        echo "There are $numRec tracks recorded in our records: " 
+                                                        echo "There are $nameExists tracks matching your search: "
                                                         echo
-                                                        grep -i $trackName musictracks.csv | awk sed 's/;/ /g' 2> /dev/null
-                                                        
+                                                        grep -i "$trackName" musictracks.csv | sed 's/;/ /g' 2> /dev/null
                                                 fi
                                         echo
-                                        echo "Would you like to search again?"
+                                        echo "Would you like to search again? (y/n)"
                                         echo
                                         echo
                                         sleep 1
                                         echo
+					/bin/bash optionSearch.sh
                                         ;;
                                 "Album" )
                                         echo "Please Enter the album that you wish to search for:"
@@ -112,13 +113,12 @@ else
                                                         echo --------------------------------------------------------
                                                         echo
                                                 else
-                                                        echo "There are $numRec tracks recorded in our records: " 
+                                                        echo "There are $nameExists tracks matching your search: "
                                                         echo
-                                                        grep -i $album musictracks.csv | awk sed 's/;/ /g' 2> /dev/null
-                                                        
+                                                        grep -i "$album" musictracks.csv | sed 's/;/ /g' 2> /dev/null
                                                 fi
                                         echo
-                                        echo "Would you like to search again?"
+                                        echo "Would you like to search again? (y/n)"
                                         echo
                                         echo
                                         sleep 1
@@ -137,16 +137,17 @@ else
                                                         echo --------------------------------------------------------
                                                         echo
                                                 else
-                                                        echo
-                                                        grep -i $genre musictracks.csv | awk sed 's/;/ /g' 2> /dev/null
-                                                        
+                                                        echo "There are $genreExists tracks matching your search: "
+							echo
+                                                        grep -i "$genre" musictracks.csv | sed 's/;/ /g' 2> /dev/null
                                                 fi
                                         echo
-                                        echo "Would you like to search again?"
+                                        echo "Would you like to search again? (y/n)"
                                         echo
                                         echo
                                         sleep 1
                                         echo
+					/bin/bash optionSearch.sh
                                         ;;
                                 "Exit" )
                                         echo "You chose exit"

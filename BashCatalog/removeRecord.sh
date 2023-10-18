@@ -6,5 +6,6 @@ echo
 echo "Type the name of the track that you would like to delete"
 echo
 read track
+grep '$track' musictracks.csv | awk '{print $@}'
 echo "Removing $track"
 
