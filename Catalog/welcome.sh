@@ -1,18 +1,19 @@
 #!/bin/bash
 # Author: Cormac Costello
 # Description: A shell script for computer systems, HDip in CS at SETU, 2023
+clear
 echo "Hello $USER!"
 sleep 0.5
 echo
-./artwork.sh
+./artwork.sh #displays some nice ASCII 'art'
 echo
 catalog_file="musictracks.csv"
 if [ -a "$catalog_file" ]; then #check if the file exists
-        echo "Hooray!"
         echo
         echo "catalogue file exists"
+		echo
 else
-        echo "Creating new catalogue"
+        echo "Creating new catalogue" # if the file doesn't exist, a new one is created and headers appended
         touch "$catalog_file"
         echo "\"Number\",\"Track Name\",\"Artist\",\"Album\",\"Genre\",\"Duration\"" >> "$catalog_file" # column headings appended to file
 fi
@@ -24,23 +25,23 @@ options=("Add" "Search" "Remove" "View Catalog" "Quit")
 select opt in "${options[@]}"
 do
 	case $opt in
-		"Add")
+		"Add") #execute the add track file
 			echo "you chose to add a new record"
 			./addRecord.sh
 			;;
-		"Search")
+		"Search") #execute the result file
 			echo "you chose to search for record(s)"
 			./search.sh
 			;;
-		"Remove")
+		"Remove") #exocute the delete file
 			echo "you chose to remove records"
 			./removeRecord.sh
 			;;
-		"View Catalog")
+		"View Catalog") #will execut the report file displaying the full catalog
 			echo "you chose to generate a new report"
 			./report.sh musictracks.csv
 			;;
-		"Quit")
+		"Quit") #exits the program
 			echo "are you sure you want to quit? (y/n)"
 			read choice
 			case $choice in

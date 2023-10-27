@@ -1,6 +1,7 @@
 #!/bin/bash
 # Author: Cormac Costello
 # Description: A script which gives a nice column layout with the column headers to returned search results
+# Takes the result from result.txt
 
 header=`column -t -s '","' -T 20 result.txt | head -n 1`
 
