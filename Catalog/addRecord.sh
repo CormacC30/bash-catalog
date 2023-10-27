@@ -77,16 +77,39 @@ while true; do
 	padSeconds=`printf "%02d" "$seconds"` #adds leading zeros to seconds if less than 10
 
 	duration=`printf "$padMinutes:$padSeconds"` #stitches the two together to give the duration in mm:ss
+	echo
+	echo
+	echo "You have entered:"
+	echo "Catalog Number: $catNum, Track Name: $trackName, Artist: $artist, Album: $album, Genre: $genre, Duration: $duration"
+	echo
+	echo "Are you sure these details are correct? (y/n) "
+	read choice
+	case $choice in
 
-	echo "\"$next_cat_num_pad\",\"$trackName\",\"$artist\",\"$album\",\"$genre\",\"$duration\"" >> "musictracks.csv" #append new track to the csv
-	echo "Added successfully"
-	echo
-	echo "The Track you just added is:"
-	echo
-	headings=`column -t -s '","' musictracks.csv | head -n 1` # print the column headers
-	echo -e "\e[1m\e[21m$headings \e[0m"
-	column -t -s '","' musictracks.csv | tail -n 1 # print just last line
-	echo
+			[yY] | [yY][eE][sS] )
+					echo "Agreed"
+					echo
+					echo "\"$next_cat_num_pad\",\"$trackName\",\"$artist\",\"$album\",\"$genre\",\"$duration\"" >> "musictracks.csv" #append new track to the csv
+					echo "Added successfully"
+					echo
+					echo "The Track you just added is:"
+					echo
+					headings=`column -t -s '","' musictracks.csv | head -n 1` # print the column headers
+					echo -e "\e[1m\e[21m$headings \e[0m"
+					column -t -s '","' musictracks.csv | tail -n 1 # print just last line
+					echo
+					;;
+			[nN] | [nN][oO] )
+					echo "You chose No"
+					sleep 1
+					echo ---------------------------------------------------------------------
+					echo "Please try again"
+					;;
+			*) echo "Invalid Input"
+					echo "Please try again"
+					;;
+
+	esac
 	echo
 	echo "Would you like to add another track? (y/n) "
 	read choice
