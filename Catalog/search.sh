@@ -150,7 +150,7 @@ else
                         result=`awk -F',' -v term="$search" '$5 ~ term' "$csv_file"`
                         numResult=`awk -F',' -v term="$search" '$5 ~ term' "$csv_file" | wc -l`
                         if [ "$numResult" -eq 0 ]; then
-                                echo "This genre does not exist, please try again"
+                                echo "This genre does not exist in the catalog, please try again"
                         else
                                 echo "There are $numResult tracks matching your search"
                                 cat musictracks.csv | head -n 1 >result.txt
@@ -163,7 +163,7 @@ else
                         echo "1) Add"
                         echo "2) Search"
                         echo "3) Remove"
-                        echo "4) Generate Report"
+                        echo "4) View Catalog"
                         echo "5) Quit"
                         exit 0
                         ;;
@@ -219,7 +219,7 @@ else
                         echo "1) Add"
                         echo "2) Search"
                         echo "3) Remove"
-                        echo "4) Generate Report"
+                        echo "4) View Catalog"
                         echo "5) Quit"
                         break
                         ;;

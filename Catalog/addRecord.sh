@@ -21,7 +21,7 @@ while true; do
 	#Note: sed is used to ignore the leading zero's so the catalog number is treated as decimal rather than octal
 	numLines=`wc -l musictracks.csv | awk '{print $1}'`
 	if [ $numLines -gt 1 ]; then
-		last_cat_number=$(tail -n 1 "$catalog_file" | awk 'BEGIN {FS=","}{gsub(/"/, "", $1); print $1}' | sed 's/^0*//')
+		last_cat_number=`tail -n 1 "$catalog_file" | awk 'BEGIN {FS=","}{gsub(/"/, "", $1); print $1}' | sed 's/^0*//'`
 	else
 		last_cat_number=0
 	fi
@@ -128,7 +128,7 @@ while true; do
 			echo "1) Add"
 			echo "2) Search"
 			echo "3) Remove"
-			echo "4) Generate Report"
+			echo "4) View Catalog"
 			echo "5) Quit"
 					break
 					;;

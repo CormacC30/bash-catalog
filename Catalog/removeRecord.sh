@@ -60,7 +60,7 @@ while true; do
 				echo "1) Add"
 				echo "2) Search"
 				echo "3) Remove"
-				echo "4) Generate Report"
+				echo "4) View Catalog"
 				echo "5) Quit"
 				exit 0
 				;;
@@ -106,7 +106,7 @@ while true; do
 					echo "1) Add"
 					echo "2) Search"
 					echo "3) Remove"
-					echo "4) Generate Report"
+					echo "4) View Catalog"
 					echo "5) Quit"
 					exit 0
 					;;
@@ -127,7 +127,7 @@ while true; do
 			echo "1) Add"
 			echo "2) Search"
 			echo "3) Remove"
-			echo "4) Generate Report"
+			echo "4) View Catalog"
 			echo "5) Quit"
 			exit 0
 			;;
@@ -163,7 +163,7 @@ while true; do
 			echo "1) Add"
 			echo "2) Search"
 			echo "3) Remove"
-			echo "4) Generate Report"
+			echo "4) View Catalog"
 			echo "5) Quit"
 			echo
 			exit 0
@@ -189,7 +189,7 @@ while true; do
 		echo "1) Add"
 		echo "2) Search"
 		echo "3) Remove"
-		echo "4) Generate Report"
+		echo "4) View Catalog"
 		echo "5) Quit"
 		break
 		;;
