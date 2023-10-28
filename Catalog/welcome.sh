@@ -1,6 +1,9 @@
 #!/bin/bash
 # Author: Cormac Costello
-# Description: A shell script for computer systems, HDip in CS at SETU, 2023
+# Description: ENTRY POINT/MAIN MENU 
+# Welcome, This is a shell script for computer systems, HDip in CS at SETU, 2023
+# Video Demo: https://youtu.be/j1LPZSMR32w
+
 clear
 echo "Hello $USER!"
 sleep 0.5

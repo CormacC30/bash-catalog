@@ -1,6 +1,7 @@
 #!/bin/bash
 # Author: Cormac Costello
 # Descripton: some basic ASCII art for the opening menu
+# Video Demo: https://youtu.be/j1LPZSMR32w
 echo -e "\e[1m\e[95m" # purple colour and bold text
 echo "*********************************************************************"
 echo "*  								    *"

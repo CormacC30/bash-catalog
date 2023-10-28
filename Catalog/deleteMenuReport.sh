@@ -1,6 +1,7 @@
 #!/bin/bash
 # Author: Cormac Costello
-# Script used to generate reports, pleasing to the eye
+# Description:Script used to generate reports, pleasing to the eye
+# Video Demo: https://youtu.be/j1LPZSMR32w
 
 FILE=$1
 header=`column -t -s '","' -T 20 $FILE | head -n 1` #takes header from first line of file

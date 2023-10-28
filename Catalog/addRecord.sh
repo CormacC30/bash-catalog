@@ -1,6 +1,8 @@
 #!/bin/bash
 # Author: Cormac Costello
-# Script that can be used to add a new music track to musictracks.csv
+# Description: Script that can be used to add a new music track to musictracks.csv
+# Video Demo: https://youtu.be/j1LPZSMR32w
+clear
 echo "Welcome $USER, get ready to add a new entry"
 catalog_file="musictracks.csv"
 if [ -a "$catalog_file" ]; then
@@ -80,7 +82,7 @@ while true; do
 	echo
 	echo
 	echo "You have entered:"
-	echo "Catalog Number: $catNum, Track Name: $trackName, Artist: $artist, Album: $album, Genre: $genre, Duration: $duration"
+	echo "Catalog Number: $next_cat_num_pad, Track Name: $trackName, Artist: $artist, Album: $album, Genre: $genre, Duration: $duration"
 	echo
 	echo "Are you sure these details are correct? (y/n) "
 	read choice

@@ -1,7 +1,10 @@
 #!/bin/bash
 # Author: Cormac Costello
 # Description: search the music catalog for tracks, both high-level and filtered.
+# Video Demo: https://youtu.be/j1LPZSMR32w
+
 # CSV file as a variable
+clear
 csv_file="musictracks.csv"
 
 numRec=`wc -l musictracks.csv | awk '{print $1}'` # finds number of employee records

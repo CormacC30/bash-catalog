@@ -1,6 +1,8 @@
 #!/bin/bash
 # Author: Cormac Costello
-# A script to delete records from the catalog
+# Description: A script to delete records from the catalog
+# Video Demo: https://youtu.be/j1LPZSMR32w
+clear
 echo "Get Ready to delete some records"
 echo
 while true; do

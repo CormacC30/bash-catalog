@@ -1,7 +1,8 @@
 #!/bin/bash
 # Author: Cormac Costello
-# Script used to generate reports on the music catalog, pleasing to the eye
-
+# Description: Script used to generate reports on the music catalog, pleasing to the eye
+# Video Demo: https://youtu.be/j1LPZSMR32w
+clear
 FILE=$1 #accepts the file (in this case musictracks.csv) or any csv file delimited by "," 
 header=`column -t -s '","' -T 20 $FILE | head -n 1` #parses csv file and displays first line as columns
 #calculates numner of entries excluding the header
